@@ -5,7 +5,7 @@ if [ -z "$__INCLUDE_VARIABLE_PKG__" ]; then
 __INCLUDE_VARIABLE_PKG__=defined
 
 VERSION_FILE=/PkgVersion
-DownloadServer="sourceforge.net/projects/dsgpl/files"
+DownloadServer="freefr.dl.sourceforge.net/projects/dsgpl/files"
 
 fi
 # vim:ft=sh
