@@ -66,13 +66,15 @@ class ToolkitDownloader:
         if not os.path.isdir(DownloadDir):
             os.makedirs(DownloadDir)
 
+          
     def _join_download_url(self, *patterns):
         url = ToolkitServer
         for pattern in list(patterns):
             if not pattern:
                 continue
             url += '/%s' % pattern
-        url = url + "?use_mirror=freefr"
+        url = url + "?use_mirror=netcologne"
+        url = 
         return url 
 
     def _download(self, url):
