@@ -72,7 +72,8 @@ class ToolkitDownloader:
             if not pattern:
                 continue
             url += '/%s' % pattern
-        return url
+        url = url + "?use_mirror=voxel"
+        return url 
 
     def _download(self, url):
         print("Download... " + url)
