@@ -90,10 +90,10 @@ class ToolkitDownloader:
             raise DownloadToolkitError("Failed to download toolkit: " + url)
 
     def dl_progress(self, count, dl_size, total_size):
-        percent = int(count * dl_size * 50 / total_size)
-        sys.stdout.write("[%-50s] %d%%" % ('=' * (percent-1) + ">", 2 * percent))
-        sys.stdout.flush()
-        sys.stdout.write("\b" * 102)
+        #percent = int(count * dl_size * 50 / total_size)
+        #sys.stdout.write("[%-50s] %d%%" % ('=' * (percent-1) + ">", 2 * percent))
+        #sys.stdout.flush()
+        #sys.stdout.write("\b" * 102)
 
     def _test_url_available(self, url):
         try:
