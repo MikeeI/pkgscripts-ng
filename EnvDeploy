@@ -73,7 +73,6 @@ class ToolkitDownloader:
             if not pattern:
                 continue
             url += '/%s' % pattern
-        url = url + "?use_mirror=netcologne"
         return url 
 
     def _download(self, url):
