@@ -23,7 +23,7 @@ sys.stderr = Tee(sys.stderr, log_file, move=False)
 
 VersionMap = 'version_map'
 DownloadDir = os.path.join(BuildEnv.SynoBase, 'toolkit_tarballs')
-ToolkitServer = 'http://data.geschmeidig.es/projects/dsgpl/files/toolkit/'
+ToolkitServer = 'http://data.geschmeidig.es/projects/synologywireguardsdk/dsgpl/files/toolkit/'
 Product = "DSM"
 
 
