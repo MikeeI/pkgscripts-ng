@@ -8,4 +8,4 @@ jobs:
     - run: ls -lah
     - run: sudo apt-get update && sudo apt-get -qy install git python3 wget ca-certificates xz-utils
     - run: mkdir -p Wireguard
-    - run: PkgCreate.py -p apollolake -v 6.2 -S --build-opt=-J --print-log -c WireGuard
+    - run: python3 PkgCreate.py -p apollolake -v 6.2 -S --build-opt=-J --print-log -c WireGuard
