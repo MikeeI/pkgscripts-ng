@@ -81,7 +81,7 @@ class ToolkitDownloader:
         #else:
         #    reporthook = self.dl_progress
 
-        #try:
+        try:
             dest = os.path.join(DownloadDir, url.split("/")[-1])
             urllib.request.urlretrieve(url + "?r=&ts=1593707308&use_mirror=netcologne", dest, reporthook=reporthook)
             print("Download destination: " + dest)
