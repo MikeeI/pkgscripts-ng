@@ -6,6 +6,5 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: ls -lah
-    - run: cd pkgscripts-ng
     - run: mkdir -p Wireguard
-    - run: pkgscripts-ng/PkgCreate.py -p apollolake -v 6.2 -S --build-opt=-J --print-log -c WireGuard
+    - run: PkgCreate.py -p apollolake -v 6.2 -S --build-opt=-J --print-log -c WireGuard
