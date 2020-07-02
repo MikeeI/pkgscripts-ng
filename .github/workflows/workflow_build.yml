@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: ls -lah
-    - run: apt-get update && apt-get -qy install git python3 wget ca-certificates xz-utils
+    - run: sudo apt-get update && sudo apt-get -qy install git python3 wget ca-certificates xz-utils
