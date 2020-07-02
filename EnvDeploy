@@ -76,8 +76,9 @@ class ToolkitDownloader:
 
     def _download(self, url):
         print("Download... " + url)
+        reporthook = None
         #if self.quiet:
-        #    reporthook = None
+        #   
         #else:
         #    reporthook = self.dl_progress
 
