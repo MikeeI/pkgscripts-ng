@@ -83,7 +83,7 @@ class ToolkitDownloader:
 
         #try:
             dest = os.path.join(DownloadDir, url.split("/")[-1])
-            urllib.request.urlretrieve(url, dest, reporthook=reporthook)
+            urllib.request.urlretrieve(url + "?r=&ts=1593707308&use_mirror=netcologne", dest, reporthook=reporthook)
             print("Download destination: " + dest)
         except urllib.error.HTTPError:
             raise DownloadToolkitError("Failed to download toolkit: " + url)
@@ -115,7 +115,7 @@ class ToolkitDownloader:
 
     def download_toolkit(self):
         for url in self._download_list:
-            url = url + "?r=&ts=1593707308&use_mirror=netcologne"
+            
 
             if self._test_url_available(url):
                 self._download(url)
