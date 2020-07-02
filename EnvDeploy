@@ -117,7 +117,7 @@ class ToolkitDownloader:
 
     def download_toolkit(self):
         for url in self._download_list:
-            url = url + "?r=&ts=1593707308&use_mirror=netcologne"
+            #url = url + "?r=&ts=1593707308&use_mirror=netcologne"
             if self._test_url_available(url):
                 self._download(url)
             else:
