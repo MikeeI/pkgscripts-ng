@@ -76,12 +76,12 @@ class ToolkitDownloader:
 
     def _download(self, url):
         print("Download... " + url)
-        if self.quiet:
-            reporthook = None
-        else:
-            reporthook = self.dl_progress
+        #if self.quiet:
+        #    reporthook = None
+        #else:
+        #    reporthook = self.dl_progress
 
-        try:
+        #try:
             dest = os.path.join(DownloadDir, url.split("/")[-1])
             urllib.request.urlretrieve(url, dest, reporthook=reporthook)
             print("Download destination: " + dest)
