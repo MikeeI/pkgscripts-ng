@@ -66,14 +66,13 @@ class ToolkitDownloader:
         if not os.path.isdir(DownloadDir):
             os.makedirs(DownloadDir)
 
-          
     def _join_download_url(self, *patterns):
         url = ToolkitServer
         for pattern in list(patterns):
             if not pattern:
                 continue
             url += '/%s' % pattern
-        return url 
+        return url
 
     def _download(self, url):
         print("Download... " + url)
@@ -91,10 +90,9 @@ class ToolkitDownloader:
 
     def dl_progress(self, count, dl_size, total_size):
         percent = int(count * dl_size * 50 / total_size)
-        #sys.stdout.write("[%-50s] %d%%" % ('=' * (percent-1) + ">", 2 * percent))
-        #sys.stdout.flush()
-        #sys.stdout.write("\b" * 102)
-        
+        sys.stdout.write("[%-50s] %d%%" % ('=' * (percent-1) + ">", 2 * percent))
+        sys.stdout.flush()
+        sys.stdout.write("\b" * 102)
 
     def _test_url_available(self, url):
         try:
@@ -117,7 +115,6 @@ class ToolkitDownloader:
 
     def download_toolkit(self):
         for url in self._download_list:
-            #url = url + "?r=&ts=1593707308&use_mirror=netcologne"
             if self._test_url_available(url):
                 self._download(url)
             else:
