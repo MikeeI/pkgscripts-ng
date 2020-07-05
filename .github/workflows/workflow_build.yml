@@ -7,7 +7,8 @@ jobs:
     - uses: actions/checkout@master
     - run: ls -lah
     - run: sudo apt-get update && sudo apt-get -qy install git python3 wget ca-certificates xz-utils
-    - run: sudo mkdir -p Wireguard
+    - run: sudo mkdir -p Wireguard &&
+           ./PkgCreate.py-p x64 -v 6.2 -S --build-opt=-J --print-log -c WireGuard
     - run: sudo ./EnvDeploy -v 6.1 -p x64 # for example
   build_2:
     runs-on: ubuntu-latest
